@@ -1,3 +1,30 @@
 @import "variables";
 @import "globals";
-//@import "index";
+
+.header {
+  padding: 0 11%;
+  font-family: $dm-serif;
+  background-color: $very-light-grey;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .list {
+    display: flex;
+
+    :not(:last-child) {
+      margin-right: calculate_rem(24px);
+    }
+
+    .item {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+main, footer {
+  display: none;
+}
