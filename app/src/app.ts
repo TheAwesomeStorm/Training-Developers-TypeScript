@@ -1,5 +1,7 @@
 import { RequestController } from './controllers/request-controller.js'
 
+let userId = ''
+
 const controller = new RequestController()
 
 const buttonImportUsers = document.querySelector('.import-users') as HTMLElement
@@ -11,18 +13,18 @@ buttonImportUsers.addEventListener('click', () => {
 const buttonImportRoles = document.querySelector('.import-roles') as HTMLElement
 
 buttonImportRoles.addEventListener('click', () => {
-  controller.importRoles('1')
+  controller.importRoles(userId)
 })
 
 const buttonImportUser = document.querySelector('.import-user') as HTMLElement
 
 buttonImportUser.addEventListener('click', () => {
-  controller.importUser('1')
+  controller.importUser(userId)
 })
 
-const usersTable = document.querySelector('html') as HTMLElement
+const page = document.querySelector('html') as HTMLElement
 
-usersTable.addEventListener('click', function (event: Event) {
+page.addEventListener('click', function (event: Event) {
   const target = event.target as Element
   const parentTag = target.parentNode as HTMLElement
   const tableRows = document.querySelectorAll('tr')
@@ -31,5 +33,7 @@ usersTable.addEventListener('click', function (event: Event) {
   }
   if (parentTag.tagName === 'TR' && parentTag.classList.contains('row-of-users')) {
     parentTag.style.backgroundColor = 'grey'
+    const selectedCellWithId = parentTag.querySelector('.user-id') as HTMLElement
+    userId = selectedCellWithId.textContent as string
   }
 })

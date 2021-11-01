@@ -21,7 +21,7 @@ export class UsersView extends View<Users> {
             ${model.list().map(user => {
               return `
                 <tr class="row-of-users">
-                    <td>${user.id}</td>
+                    <td class="user-id">${user.id}</td>
                     <td>${user.name}</td>
                     <td>${user.email}</td>
                     <td>${user.password}</td>
