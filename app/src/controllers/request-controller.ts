@@ -36,6 +36,7 @@ export class RequestController {
   }
 
   public importRoles (id: string): void {
+    this.roles.clear()
     this.service.reachRoles(id)
       .then(reachedRoles => {
         for (const role of reachedRoles) {

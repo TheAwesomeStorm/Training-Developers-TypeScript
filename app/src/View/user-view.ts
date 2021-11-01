@@ -8,21 +8,25 @@ export class UserView extends View<User> {
     this.clear()
     return `
       <table class="table">
-        <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>E-mail</th>
-              <th>Password</th>
-              <th>Roles</th>
-            </tr>
-        </thead>
         <tbody>
             <tr>
+              <td>ID</td>
               <td>${model.id}</td>
+            </tr>
+            <tr>
+              <td>Name</td>
               <td>${model.name}</td>
+            </tr>
+            <tr>
+              <td>E-mail</td>
               <td>${model.email}</td>
+            </tr>
+            <tr>
+              <td>Password</td>
               <td>${model.password}</td>
+            </tr>
+            <tr>
+              <td>Roles</td>
               <td>${model.roles}</td>
             </tr>
         </tbody>

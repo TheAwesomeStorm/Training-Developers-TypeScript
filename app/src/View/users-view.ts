@@ -7,7 +7,7 @@ export class UsersView extends View<Users> {
   protected template (model: Users): string {
     this.clear()
     return `
-      <table class="table">
+      <table class="usersTable">
         <thead>
             <tr>
               <th>ID</th>
@@ -20,7 +20,7 @@ export class UsersView extends View<Users> {
         <tbody>
             ${model.list().map(user => {
               return `
-                <tr>
+                <tr class="row-of-users">
                     <td>${user.id}</td>
                     <td>${user.name}</td>
                     <td>${user.email}</td>

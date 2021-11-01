@@ -1,7 +1,7 @@
 import { Comparable } from '../interfaces/comparable.js'
 
 export class ObjectList<T> implements Comparable<ObjectList<T>> {
-  private readonly members: T[] = []
+  private members: T[] = []
 
   public add (member: T): void {
     this.members.push(member)
@@ -13,5 +13,9 @@ export class ObjectList<T> implements Comparable<ObjectList<T>> {
 
   public compare (members: ObjectList<T>): boolean {
     return JSON.stringify(this.members) === JSON.stringify(members)
+  }
+
+  public clear (): void {
+    this.members = []
   }
 }

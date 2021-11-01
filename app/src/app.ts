@@ -1,21 +1,35 @@
 import { RequestController } from './controllers/request-controller.js'
 
-// function writeText (text: string): void {
-//   const body: HTMLBodyElement = document.querySelector('body') as HTMLBodyElement
-//   const textSegment: HTMLParagraphElement = document.createElement('p')
-//   textSegment.innerText = text
-//   body.appendChild(textSegment)
-// }
-//
-
 const controller = new RequestController()
 
-controller.importUsers()
+const buttonImportUsers = document.querySelector('.import-users') as HTMLElement
 
-console.log(controller.users)
+buttonImportUsers.addEventListener('click', () => {
+  controller.importUsers()
+})
 
-controller.importRoles('1')
+const buttonImportRoles = document.querySelector('.import-roles') as HTMLElement
 
-console.log(controller.roles)
+buttonImportRoles.addEventListener('click', () => {
+  controller.importRoles('1')
+})
 
-controller.importUser('2')
+const buttonImportUser = document.querySelector('.import-user') as HTMLElement
+
+buttonImportUser.addEventListener('click', () => {
+  controller.importUser('1')
+})
+
+const usersTable = document.querySelector('html') as HTMLElement
+
+usersTable.addEventListener('click', function (event: Event) {
+  const target = event.target as Element
+  const parentTag = target.parentNode as HTMLElement
+  const tableRows = document.querySelectorAll('tr')
+  for (const row of tableRows) {
+    row.style.backgroundColor = 'white'
+  }
+  if (parentTag.tagName === 'TR' && parentTag.classList.contains('row-of-users')) {
+    parentTag.style.backgroundColor = 'grey'
+  }
+})
