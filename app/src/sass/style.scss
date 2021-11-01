@@ -25,9 +25,9 @@
   }
 }
 
-main {
-  display: none;
-}
+//main {
+//  display: none;
+//}
 
 .footer {
   position: absolute;
@@ -40,11 +40,20 @@ main {
 
   .socials {
     font-family: $dm-serif;
+    height: calculate_rem(80px);
+    border-bottom: 1px $dark-grayish-violet solid;
+    margin-bottom: calculate_rem(32px);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .list {
       display: flex;
+      align-items: center;
+
+      .logo {
+        width: calculate_rem(24px);
+      }
 
       :not(:last-child) {
         margin-right: calculate_rem(16px);
@@ -54,10 +63,30 @@ main {
 
   .info {
     font-family: $karla;
+    text-transform: uppercase;
+    font-size: calculate_rem(14px);
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
 
     .list {
-      justify-content: space-between;
+
+      :not(:first-child) {
+        margin-bottom: calculate_rem(6px);
+      }
+
+      .title {
+        color: $dark-grayish-violet;
+        font-size: inherit;
+        font-weight: 700;
+        margin-bottom: calculate_rem(18px);
+      }
+
+      .link {
+        text-decoration: none;
+        color: $very-dark-violet;
+        font-weight: 700;
+      }
     }
   }
 }
