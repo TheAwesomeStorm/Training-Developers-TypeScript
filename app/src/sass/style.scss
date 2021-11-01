@@ -34,9 +34,33 @@
   align-items: center;
 
   .highlight {
-    width: 35%;
-    line-height: 1.3rem;
+    width: 45%;
+    line-height: 1.5rem;
+    font-family: $karla;
     color: $very-light-grey;
+
+    .title {
+      width: 80%;
+      font-size: calculate_rem(32px);
+
+      &.one {
+        margin-bottom: calculate_rem(4px);
+      }
+
+      &.two {
+        margin-bottom: calculate_rem(16px);
+      }
+    }
+
+    .text {
+      text-align: justify;
+    }
+
+    .border {
+      width: 40%;
+      height: calculate_rem(48px);
+      border-top: 2px $very-light-grey solid;
+    }
   }
 
   .imports {
@@ -51,6 +75,8 @@
     }
 
     .btn {
+      font-family: $karla;
+      font-size: calculate_rem(14px);
       background-color: $very-dark-violet;
       color: $very-light-grey;
       text-transform: uppercase;
