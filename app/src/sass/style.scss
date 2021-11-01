@@ -25,6 +25,39 @@
   }
 }
 
-main, footer {
+main {
   display: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 11%;
+  background-color: $very-light-grey;
+  display: flex;
+  flex-direction: column;
+
+  .socials {
+    font-family: $dm-serif;
+    display: flex;
+    justify-content: space-between;
+
+    .list {
+      display: flex;
+
+      :not(:last-child) {
+        margin-right: calculate_rem(16px);
+      }
+    }
+  }
+
+  .info {
+    font-family: $karla;
+    display: flex;
+
+    .list {
+      justify-content: space-between;
+    }
+  }
 }
