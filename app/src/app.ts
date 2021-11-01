@@ -4,16 +4,45 @@ let userId = ''
 
 const controller = new RequestController()
 
+const apiSection = document.querySelector('.api') as HTMLElement
+
+const buttonHome = document.querySelector('.home') as HTMLElement
+
+const pageTitle = document.querySelector('title') as HTMLElement
+
+buttonHome.addEventListener('click', () => {
+  buttonImportUsers.classList.remove('hide')
+  buttonImportRoles.classList.add('hide')
+  buttonReturn.classList.add('hide')
+  apiSection.innerHTML = ''
+  pageTitle.innerHTML = 'Home | SPA'
+})
+
+const buttonReturn = document.querySelector('.return') as HTMLElement
+
+buttonReturn.addEventListener('click', () => {
+  buttonReturn.classList.add('hide')
+  buttonImportRoles.classList.remove('hide')
+  controller.importUsers()
+  pageTitle.innerHTML = 'Users | SPA'
+})
+
 const buttonImportUsers = document.querySelector('.import-users') as HTMLElement
 
 buttonImportUsers.addEventListener('click', () => {
   controller.importUsers()
+  buttonImportUsers.classList.add('hide')
+  buttonImportRoles.classList.remove('hide')
+  pageTitle.innerHTML = 'Users | SPA'
 })
 
 const buttonImportRoles = document.querySelector('.import-roles') as HTMLElement
 
 buttonImportRoles.addEventListener('click', () => {
   controller.importRoles(userId)
+  buttonImportRoles.classList.add('hide')
+  buttonReturn.classList.remove('hide')
+  pageTitle.innerHTML = 'Roles | SPA'
 })
 
 const buttonImportUser = document.querySelector('.import-user') as HTMLElement
@@ -37,10 +66,3 @@ page.addEventListener('click', function (event: Event) {
     userId = selectedCellWithId.textContent as string
   }
 })
-
-// const toBeRemoved = document.querySelectorAll('.import')
-//
-// for (const element of toBeRemoved) {
-//   const teste = element as HTMLElement
-//   teste.style.display = 'none'
-// }
