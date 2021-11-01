@@ -38,9 +38,9 @@ page.addEventListener('click', function (event: Event) {
   }
 })
 
-const toBeRemoved = document.querySelectorAll('.import')
-
-for (const element of toBeRemoved) {
-  const teste = element as HTMLElement
-  teste.style.display = 'none'
-}
+// const toBeRemoved = document.querySelectorAll('.import')
+//
+// for (const element of toBeRemoved) {
+//   const teste = element as HTMLElement
+//   teste.style.display = 'none'
+// }

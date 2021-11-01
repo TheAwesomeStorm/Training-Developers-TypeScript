@@ -1,0 +1,14 @@
+@function calculate_rem($size) {
+  @return $size / 16px * 1rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

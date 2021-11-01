@@ -6,9 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "lite-server --baseDir=app/dist",
+    "create": "sass --watch ./app/src/sass/style.scss ./app/dist/css/style.css",
     "compile": "tsc",
     "watch": "tsc -w",
-    "start": "concurrently \"npm run watch\" \"npm run server\""
+    "start": "concurrently \"npm run watch\" \"npm run server\" \"npm run create\""
   },
   "author": "Daniel Mendes Sechinske",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.1",
     "lite-server": "^2.6.1",
+    "sass": "^1.43.4",
     "typescript": "^4.4.4"
   }
 }
