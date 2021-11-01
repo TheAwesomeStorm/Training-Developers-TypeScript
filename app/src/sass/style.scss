@@ -27,6 +27,8 @@
 
 .main {
   .panel {
+    height: calculate_rem(420px);
+    background-color: $very-dark-violet;
     padding: 11%;
     display: flex;
     justify-content: space-between;
@@ -34,14 +36,32 @@
 
     .highlight {
       width: 35%;
+      line-height: 1.3rem;
+      color: $very-light-grey;
     }
 
     .imports {
       width: 35%;
-      padding: 0 5%;
+      padding: 0 3%;
       display: flex;
       flex-direction: column;
       align-content: center;
+
+      :not(:last-child) {
+        margin-bottom: calculate_rem(16px);
+      }
+
+      .btn {
+        background-color: $very-dark-violet;
+        color: $very-light-grey;
+        text-transform: uppercase;
+        padding: calculate_rem(12px);
+        border: 2px $very-light-grey solid;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
