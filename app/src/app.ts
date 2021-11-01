@@ -37,3 +37,10 @@ page.addEventListener('click', function (event: Event) {
     userId = selectedCellWithId.textContent as string
   }
 })
+
+const toBeRemoved = document.querySelectorAll('.import')
+
+for (const element of toBeRemoved) {
+  const teste = element as HTMLElement
+  teste.style.display = 'none'
+}
