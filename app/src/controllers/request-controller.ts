@@ -35,7 +35,7 @@ export class RequestController {
         for (const role of reachedRoles) {
           this.roles.add(role)
         }
-        this.rolesView.update(this.roles)
+        this.rolesView.update(this.roles, name)
       })
       .catch(error => console.log(error))
   }

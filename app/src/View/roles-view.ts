@@ -4,13 +4,13 @@ import { removeScript } from '../decorators/remove-script.js'
 
 export class RolesView extends View<Roles> {
   @removeScript
-  protected template (model: Roles, name: string = 'Daniel'): string {
+  protected template (model: Roles): string {
     this.clear()
     return `
       <table class="table">
         <thead>
             <tr>
-              <th>${name} is allowed to</th>
+              <th>${this.name} is allowed to</th>
             </tr>
         </thead>
         <tbody>
