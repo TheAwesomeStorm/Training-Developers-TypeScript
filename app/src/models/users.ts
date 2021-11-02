@@ -16,4 +16,13 @@ export class User implements UserInterface, Comparable<User> {
   }
 }
 
-export class Users extends ObjectList<User> {}
+export class Users extends ObjectList<User> {
+  public search (name: string): string {
+    for (const user of this.members) {
+      if (user.name === name) {
+        return (user.id).toString()
+      }
+    }
+    return 'Not found'
+  }
+}

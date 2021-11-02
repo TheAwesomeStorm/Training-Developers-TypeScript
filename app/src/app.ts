@@ -26,7 +26,7 @@ buttonImportUsers.addEventListener('click', () => {
 })
 
 buttonImportRoles.addEventListener('click', () => {
-  controller.importRoles('1')
+  controller.importRoles('Ermenegildo')
   buttonImportRoles.classList.add('hide')
   buttonReturn.classList.remove('hide')
   pageTitle.innerHTML = 'Roles | SPA'

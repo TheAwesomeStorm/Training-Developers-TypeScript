@@ -1,7 +1,7 @@
 import { Comparable } from '../interfaces/comparable.js'
 
 export class ObjectList<T> implements Comparable<ObjectList<T>> {
-  private members: T[] = []
+  protected members: T[] = []
 
   public add (member: T): void {
     this.members.push(member)

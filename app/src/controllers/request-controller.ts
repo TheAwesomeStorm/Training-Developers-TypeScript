@@ -27,7 +27,8 @@ export class RequestController {
       .catch(error => console.log(error))
   }
 
-  public importRoles (id: string): void {
+  public importRoles (name: string): void {
+    const id = this.users.search(name)
     this.roles.clear()
     this.service.reachRoles(id)
       .then(reachedRoles => {
