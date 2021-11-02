@@ -158,6 +158,7 @@
   font-family: $karla;
   margin: calculate_rem(48px) 0;
   padding: 0 11%;
+  min-height: 20vh;
 
   .table {
     margin: 0 auto;

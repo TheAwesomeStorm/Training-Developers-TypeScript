@@ -10,7 +10,7 @@ export class UsersView extends View<Users> {
       <table class="table">
         <thead>
             <tr>
-              <th>Name</th>
+              <th>Users</th>
             </tr>
         </thead>
         <tbody>
