@@ -3,7 +3,6 @@ import { Users } from '../models/users.js'
 import { Roles } from '../models/roles.js'
 import { UsersView } from '../View/users-view.js'
 import { RolesView } from '../View/roles-view.js'
-import { UserView } from '../View/user-view.js'
 
 export class RequestController {
   public readonly users = new Users()
@@ -11,7 +10,6 @@ export class RequestController {
   private readonly service = new WebService()
   private readonly usersView = new UsersView('.api')
   private readonly rolesView = new RolesView('.api')
-  private readonly userView = new UserView('.api')
 
   public importUsers (): void {
     this.service.reachUsers()
@@ -26,12 +24,6 @@ export class RequestController {
         }
         this.usersView.update(this.users)
       })
-      .catch(error => console.log(error))
-  }
-
-  public importUser (id: string): void {
-    this.service.reachUser(id)
-      .then(reachedUser => this.userView.update(reachedUser))
       .catch(error => console.log(error))
   }
 

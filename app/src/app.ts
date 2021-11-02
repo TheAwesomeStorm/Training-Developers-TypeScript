@@ -45,12 +45,6 @@ buttonImportRoles.addEventListener('click', () => {
   pageTitle.innerHTML = 'Roles | SPA'
 })
 
-const buttonImportUser = document.querySelector('.import-user') as HTMLElement
-
-buttonImportUser.addEventListener('click', () => {
-  controller.importUser(userId)
-})
-
 const page = document.querySelector('html') as HTMLElement
 
 page.addEventListener('click', function (event: Event) {

@@ -14,13 +14,6 @@ export class WebService {
       })
   }
 
-  public async reachUser (id: string): Promise<User> {
-    return await WebService.reach(`http://localhost:8080/api/user/${id}`)
-      .then((data: UserInterface) => {
-        return new User(data.id, data.name, data.email, data.password, data.roles)
-      })
-  }
-
   public async reachRoles (id: string): Promise<Role[]> {
     return await WebService.reach(`http://localhost:8080/api/user/${id}/role`)
       .then((dataSet: RoleInterface[]) => {
