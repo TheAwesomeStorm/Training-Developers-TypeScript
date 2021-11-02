@@ -160,27 +160,19 @@
     border-collapse: collapse;
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 
-    th, td {
-      padding: calculate_rem(4px) calculate_rem(16px);
-    }
+      th, td {
+        padding: calculate_rem(4px) calculate_rem(16px);
+      }
 
-    th {
-      background-color: $dark-grayish-violet;
-      color: $very-dark-violet;
-      font-weight: 700;
-    }
+      th {
+        background-color: $dark-blue;
+        color: $very-light-grey;
+        font-weight: 700;
+      }
 
-    td {
-      background-color: $very-light-grey;
-      color: $very-dark-violet;
-    }
-
-    tbody tr {
-        border-bottom: 1px $grayish-blue solid;
-
-        &:last-child {
-          border: 0;
-        }
+      td {
+        background-color: $very-light-grey;
+        color: $very-dark-violet;
       }
     }
 }
