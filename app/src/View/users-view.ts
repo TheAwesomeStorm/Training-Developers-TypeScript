@@ -16,9 +16,7 @@ export class UsersView extends View<Users> {
         <tbody>
             ${model.list().map(user => {
               return `
-                <tr class="row-of-users">
-                    <td class="user-name">${user.name}</td>
-                </tr>
+                <tr><td class="user-name">${user.name}</td></tr>
               `
             }).join('')}
         </tbody>
