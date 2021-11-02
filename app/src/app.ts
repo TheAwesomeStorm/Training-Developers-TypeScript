@@ -66,3 +66,22 @@ page.addEventListener('click', function (event: Event) {
     userId = selectedCellWithId.textContent as string
   }
 })
+
+// const account = document.querySelector('.account') as HTMLElement
+//
+// account.addEventListener('click', () => {
+//   const xhr = new XMLHttpRequest()
+//
+//   xhr.onload = function () {
+//     console.log(xhr.responseText)
+//   }
+//
+//   const body = {
+//     email: 'daniel@outlook.com',
+//     password: 'password'
+//   }
+//
+//   xhr.open('POST', 'http://localhost:8080/api/login')
+//   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+//   xhr.send(JSON.stringify(body))
+// })
