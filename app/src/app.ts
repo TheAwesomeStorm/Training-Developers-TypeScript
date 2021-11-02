@@ -1,7 +1,5 @@
 import { RequestController } from './controllers/request-controller.js'
 
-// let userId = ''
-
 const controller = new RequestController()
 
 const pageBody = document.querySelector('body') as HTMLElement

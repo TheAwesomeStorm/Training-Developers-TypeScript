@@ -2,7 +2,6 @@ import { UserInterface } from '../interfaces/user-interface.js'
 import { RoleInterface } from '../interfaces/role-interface.js'
 import { User } from '../models/users.js'
 import { Role } from '../models/roles.js'
-// import { RequestController } from '../controllers/request-controller.js'
 
 export class WebService {
   public async reachUsers (): Promise<User[]> {
