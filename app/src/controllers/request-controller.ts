@@ -1,8 +1,8 @@
 import { WebService } from '../services/web-service.js'
 import { Users } from '../models/users.js'
 import { Roles } from '../models/roles.js'
-import { UsersView } from '../View/users-view.js'
-import { RolesView } from '../View/roles-view.js'
+import { UsersView } from '../view/users-view.js'
+import { RolesView } from '../view/roles-view.js'
 
 export class RequestController {
   public readonly users = new Users()
