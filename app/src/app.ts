@@ -58,10 +58,10 @@ page.addEventListener('click', function (event: Event) {
   const parentTag = target.parentNode as HTMLElement
   const tableRows = document.querySelectorAll('tr')
   for (const row of tableRows) {
-    row.style.backgroundColor = 'white'
+    row.classList.remove('grey')
   }
   if (parentTag.tagName === 'TR' && parentTag.classList.contains('row-of-users')) {
-    parentTag.style.backgroundColor = 'grey'
+    parentTag.classList.toggle('grey')
     const selectedCellWithId = parentTag.querySelector('.user-id') as HTMLElement
     userId = selectedCellWithId.textContent as string
   }

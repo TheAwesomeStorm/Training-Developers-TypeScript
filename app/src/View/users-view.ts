@@ -7,7 +7,7 @@ export class UsersView extends View<Users> {
   protected template (model: Users): string {
     this.clear()
     return `
-      <table class="usersTable">
+      <table class="table">
         <thead>
             <tr>
               <th>ID</th>
@@ -22,7 +22,7 @@ export class UsersView extends View<Users> {
               return `
                 <tr class="row-of-users">
                     <td class="user-id">${user.id}</td>
-                    <td>${user.name}</td>
+                    <td class="user-name">${user.name}</td>
                     <td>${user.email}</td>
                     <td>${user.password}</td>
                     <td>${user.roles}</td>

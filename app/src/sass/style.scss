@@ -150,9 +150,45 @@
 }
 
 .api {
-  margin-bottom: calculate_rem(48px);
+  font-family: $karla;
+  margin: calculate_rem(48px) 0;
+  padding: 0 11%;
+
+  .table {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+    th, td {
+      padding: calculate_rem(4px) calculate_rem(16px);
+    }
+
+    th {
+      background-color: $dark-grayish-violet;
+      color: $very-dark-violet;
+      font-weight: 700;
+    }
+
+    td {
+      background-color: $very-light-grey;
+      color: $very-dark-violet;
+    }
+
+    tbody tr {
+        border-bottom: 1px $grayish-blue solid;
+
+        &:last-child {
+          border: 0;
+        }
+      }
+    }
 }
 
 .hide {
   display: none;
+}
+
+.grey {
+  background-color: $dark-grayish-violet;
 }
