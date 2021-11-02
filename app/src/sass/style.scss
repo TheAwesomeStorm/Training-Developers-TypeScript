@@ -20,6 +20,7 @@
     .item {
       &:hover {
         cursor: pointer;
+        border-bottom: 1px $dark-violet solid;
       }
     }
   }
@@ -144,6 +145,10 @@
         text-decoration: none;
         color: $very-dark-violet;
         font-weight: 700;
+
+        &:hover {
+          border-bottom: 1px $dark-violet solid;
+        }
       }
     }
   }
@@ -173,6 +178,14 @@
       td {
         background-color: $very-light-grey;
         color: $very-dark-violet;
+      }
+
+      tbody tr {
+        border-bottom: 1px $dark-violet solid;
+
+        &:last-child {
+          border: 0;
+        }
       }
     }
 }
