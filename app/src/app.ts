@@ -40,5 +40,6 @@ pageBody.addEventListener('click', function (event: Event) {
   if (target.classList.contains('user-name')) {
     controller.importRoles(target.innerText)
     buttonReturn.classList.remove('hide')
+    pageTitle.innerHTML = `${target.innerText}'s Access | SPA`
   }
 })
