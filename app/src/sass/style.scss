@@ -90,7 +90,6 @@
 }
 
 .footer {
-  margin-top: calculate_rem(48px);
   width: 100%;
   padding: 0 11%;
   background-color: $very-light-grey;
@@ -148,6 +147,10 @@
       }
     }
   }
+}
+
+.api {
+  margin-bottom: calculate_rem(48px);
 }
 
 .hide {
