@@ -41,5 +41,3 @@ pageBody.addEventListener('click', function (event: Event) {
     pageTitle.innerHTML = `${target.innerText}'s Access | SPA`
   }
 })
-
-console.log('done')
