@@ -179,6 +179,10 @@
       td {
         background-color: $very-light-grey;
         color: $very-dark-violet;
+        
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       tbody tr {
